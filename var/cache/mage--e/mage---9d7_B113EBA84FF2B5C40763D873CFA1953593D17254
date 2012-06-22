@@ -301,7 +301,7 @@
 </ul>
 <!-- menu end -->
 
-    <a id="page-help-link" href="http://www.magentocommerce.com/gethelp/en_IE/Mage_Adminhtml/cache/index/">Get help for this page</a>
+    <a id="page-help-link" href="http://www.magentocommerce.com/gethelp/en_IE/Mage_Adminhtml/notification/index/">Get help for this page</a>
     <script type="text/javascript">$('page-help-link').target = 'magento_page_help'</script>
 
 </div>
