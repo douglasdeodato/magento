@@ -5075,6 +5075,35 @@
 <xmlconnect_review_form>
    <block type="xmlconnect/review_form" name="xmlconnect.review.form" output="toHtml"/>
 </xmlconnect_review_form>
+<default>
+   <reference name="head">
+      <block type="page/html_head" name="lightboxes_head" as="lightboxes_head" template="lightboxes/head.phtml">
+         <block type="lightboxes/lightboxes" name="jquery_inclusion" as="jquery_inclusion" template="lightboxes/jquery_inclusion.phtml"/>
+         <block type="lightboxes/lightboxes" name="lightboxes_inclusion" as="lightboxes_inclusion" template="lightboxes/lightboxes_inclusion.phtml"/>
+         <block type="lightboxes/lightboxes" name="lightboxes_initialization" as="lightboxes_initialization" template="lightboxes/lightboxes_initialization.phtml"/>
+      </block>
+   </reference>
+</default>
+<catalog_product_view>
+   <reference name="product.info.media">
+      <action method="setTemplate" ifconfig="lightboxes/option/active">
+         <template>lightboxes/media.phtml</template>
+      </action>
+      <block type="lightboxes/lightboxes" name="jquery_inclusion" as="jquery_inclusion" template="lightboxes/jquery_inclusion.phtml"/>
+      <block type="lightboxes/lightboxes" name="lightboxes_inclusion" as="lightboxes_inclusion" template="lightboxes/lightboxes_inclusion.phtml"/>
+      <block type="lightboxes/lightboxes" name="lightboxes_initialization" as="lightboxes_initialization" template="lightboxes/lightboxes_initialization.phtml"/>
+   </reference>
+</catalog_product_view>
+<review_product_list>
+   <reference name="product.info.media">
+      <action method="setTemplate" ifconfig="lightboxes/option/active">
+         <template>lightboxes/media.phtml</template>
+      </action>
+      <block type="lightboxes/lightboxes" name="jquery_inclusion" as="jquery_inclusion" template="lightboxes/jquery_inclusion.phtml"/>
+      <block type="lightboxes/lightboxes" name="lightboxes_inclusion" as="lightboxes_inclusion" template="lightboxes/lightboxes_inclusion.phtml"/>
+      <block type="lightboxes/lightboxes" name="lightboxes_initialization" as="lightboxes_initialization" template="lightboxes/lightboxes_initialization.phtml"/>
+   </reference>
+</review_product_list>
 <moneybookers_processing_payment>
    <reference name="root">
       <action method="setTemplate">
